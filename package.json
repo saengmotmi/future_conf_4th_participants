@@ -2,9 +2,15 @@
   "name": "future_conf_4th_participants",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "start": "react-router-serve ./build/server/index.js"
+  },
   "devDependencies": {
     "@react-router/dev": "^7.0.0-pre.1",
     "@types/bun": "latest",
+    "@types/react": "^18.3.11",
     "vite": "^5.4.9"
   },
   "peerDependencies": {
