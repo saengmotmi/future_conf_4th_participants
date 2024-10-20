@@ -1,5 +1,7 @@
-import { Outlet, Scripts, ScrollRestoration } from "react-router";
-import { GlobalStyle } from "./styles";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
+
+import "./styles/globalStyles.css";
+import "./styles/tailwind.css";
 
 export function Layout() {
   return (
@@ -8,10 +10,11 @@ export function Layout() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>퓨쳐콘 4th!</title>
+        <Meta />
+        <Links />
       </head>
       <body>
         <Outlet />
-        <GlobalStyle />
         <ScrollRestoration />
         <Scripts />
       </body>
