@@ -1,4 +1,5 @@
 import { Outlet, Scripts, ScrollRestoration } from "react-router";
+import { GlobalStyle } from "./styles";
 
 export function Layout() {
   return (
@@ -10,6 +11,7 @@ export function Layout() {
       </head>
       <body>
         <Outlet />
+        <GlobalStyle />
         <ScrollRestoration />
         <Scripts />
       </body>
