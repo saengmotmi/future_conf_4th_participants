@@ -1,3 +1,3 @@
-import { index } from "@react-router/dev/routes";
+import { index, type RouteConfig } from "@react-router/dev/routes";
 
-export const routes = [index("./home.jsx")];
+export const routes: RouteConfig = [index("./home.tsx")];
