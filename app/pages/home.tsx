@@ -36,7 +36,7 @@ export default function Home({ loaderData }: { loaderData: Participant[] }) {
         </h1>
       </div>
       <p className="text-center text-gray-600 mb-8">
-        We are the future! Future Conf 4th에 오신 것을 환영합니다 🎉
+        We are the future! 퓨쳐콘 4번째 행사에 오신 것을 환영합니다 🎉
       </p>
       <ArrivalTimeline participants={loaderData} />
       <input
