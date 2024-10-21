@@ -19,7 +19,7 @@ const ParticipantCard = ({ participant }: { participant: Participant }) => {
             도착 예정: {participant.arrivalTime}
           </InfoItem>
           <InfoItem icon={<Icons.CareerYears />}>
-            경력 {participant.yearsOfExperience}년차
+            경력 {participant.yearsOfExperience}
           </InfoItem>
           <InfoItem icon={<Icons.Email />}>{participant.email}</InfoItem>
           <InfoItem icon={<Icons.Github />}>
