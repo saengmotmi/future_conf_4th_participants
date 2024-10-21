@@ -1,0 +1,14 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index 058bfbcbecf1fe723b16bf65a5337c76bfae076d..1f12e94852f1e07f3c8dd5b0e9134f911646e957 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -10588,7 +10588,8 @@ function createStaticHandlerDataRoutes(manifest, future, parentId, routesByParen
+         // If we're prerendering, use the data passed in from prerendering
+         // the .data route so we dom't call loaders twice
+         if (args.request.headers.has("X-React-Router-Prerender-Data")) {
+-          let encoded = args.request.headers.get("X-React-Router-Prerender-Data");
++          let preRenderedData = args.request.headers.get("X-React-Router-Prerender-Data")
++          let encoded = preRenderedData ? decodeURI(preRenderedData) : preRenderedData
+           !encoded ? process.env.NODE_ENV !== "production" ? invariant(false, "Missing prerendered data for route") : invariant(false) : void 0;
+           let uint8array = new TextEncoder().encode(encoded);
+           let stream = new ReadableStream({
