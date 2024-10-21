@@ -9,6 +9,7 @@ export async function loader() {
   const participants = (await fetch(
     "https://pub-fbb53ae5c5f047428b2e550e1deccc50.r2.dev/full-participants-data.json"
   ).then((res) => res.json())) as Participant[];
+
   return participants;
 }
 

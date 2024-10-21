@@ -63,22 +63,13 @@ export const EmptyAvatar = ({ name }: { name: string }) => (
 );
 
 export const Avatar = ({ participant }: { participant: Participant }) => {
-  const [isError, setIsError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false); // 이미지 로딩 상태
-
   return (
     <>
-      {(!imageLoaded || isError) && <EmptyAvatar name={participant.name} />}
-      <div
-        className="w-16 h-16 rounded-full overflow-hidden"
-        style={{ display: !imageLoaded || isError ? "none" : "block" }}
-      >
+      <div className="w-16 h-16 rounded-full overflow-hidden">
         <img
           src={`https://github.com/${participant.github}.png`}
           alt={participant.name}
           className="w-full h-full object-cover"
-          onError={() => setIsError(true)}
-          onLoad={() => setImageLoaded(true)}
           fetchPriority="high"
         />
       </div>
